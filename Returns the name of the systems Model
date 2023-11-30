@@ -1,1 +1,14 @@
-
+$computer = Get-WmiObject -Class Win32_ComputerSystem 
+if ($computer.Manufacturer -eq "HP")
+{
+	return $computer.Model
+}
+elseif ($computer.Manufacturer -eq "LENOVO")
+{
+	$CsSystemSKUNumber = (Get-ComputerInfo | Select-Object -Property CsSystemSKUNumber).CsSystemSKUNumber
+	return $CsSystemSKUNumber
+}
+else
+{
+	return $computer.Manufacturer
+}
