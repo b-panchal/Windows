@@ -1,0 +1,7 @@
+# Description: Returns status of Service
+# Execution Context: System
+# Execution Architecture: EITHER64OR32BIT
+# Return Type: String
+
+$ServiceStatus = Get-Service -DisplayName 'VMware Experience Management Service' | Select Status
+$ServiceStatus.Status
