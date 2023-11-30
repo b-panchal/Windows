@@ -1,3 +1,8 @@
+# Description: Returns the name of the system Model
+# Execution Context: SYSTEM
+# Execution Architecture: Auto-EITHER64OR32BIT
+# Return Type: STRING
+
 $computer = Get-WmiObject -Class Win32_ComputerSystem 
 if ($computer.Manufacturer -eq "HP")
 {
