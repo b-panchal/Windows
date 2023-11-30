@@ -1,0 +1,107 @@
+=========================================
+folder_size_prefetch_mb
+
+Return folder size of "C:\Windows\Prefetch" in MB
+
+Language - PowerShell
+Execution Context - System
+Execution Architecture - Auto
+Response Data Type - Integer
+
+
+
+$folder = "C:\Windows\Prefetch"
+$folderInfo = Get-ChildItem $folder -Recurse -File | Measure-Object -Property Length -Sum
+$folderSize = ([System.Math]::Round(($folderInfo.Sum/1MB)))
+Return "$folderSize"
+
+=========================================
+
+folder_size_temp_mb
+
+Return folder size of "C:\Windows\Temp" in MB
+
+Language - PowerShell
+Execution Context - System
+Execution Architecture - Auto
+Response Data Type - Integer
+
+$folder = "C:\Windows\Temp"
+$folderInfo = Get-ChildItem $folder -Recurse -File | Measure-Object -Property Length -Sum
+$folderSize = ([System.Math]::Round(($folderInfo.Sum/1MB)))
+Return "$folderSize"
+
+=========================================
+
+folder_size_user_temp_mb
+
+Returns folder size of User Temp in MB
+
+Language - PowerShell
+Execution Context - Current User
+Execution Architecture - Auto
+Response Data Type - Integer
+
+$current_user = Get-WMIObject -class Win32_ComputerSystem | select username
+$User = ($current_user.username).Split('\')
+$u = $User[1]
+$folder = "C:\Users\$u\Appdata\Local\Temp"
+$folderInfo = Get-ChildItem $folder -Recurse -File | Measure-Object -Property Length -Sum
+$folderSize = ([System.Math]::Round(($folderInfo.Sum/1MB)))
+Return "$folderSize"
+
+=========================================
+
+
+
+
+
+=========================================
+
+folder_size_ccmcache_mb
+
+ Return folder size of ccmcache "C:\Windows\ccmcache" in MB 
+
+ ccmcache: C:\Windows\ccmcache\allfolder removed except"skpswi.dat"
+
+$folder = "C:\Windows\ccmcache"
+$folderInfo = Get-ChildItem $folder -Recurse -File | Measure-Object -Property Length -Sum
+$folderSize = ([System.Math]::Round(($folderInfo.Sum/1MB)))
+Return "$folderSize"
+
+
+=========================================
+
+folder_size_sw_distribution_mb
+
+Return folder size of Software Distribution "C:\Windows\SoftwareDistribution\Download " in MB
+
+$folder = "C:\Windows\SoftwareDistribution\Download"
+$folderInfo = Get-ChildItem $folder -Recurse -File | Measure-Object -Property Length -Sum
+$folderSize = ([System.Math]::Round(($folderInfo.Sum/1MB)))
+Return "$folderSize"
+
+=========================================
+
+folder_size_av_logs_mb
+
+Return folder size of Antivirus Log "C:\Program Files (x86)\Trend Micro\BM\log" in MB
+
+$folder = "C:\Program Files (x86)\Trend Micro\BM\log"
+$folderInfo = Get-ChildItem $folder -Recurse -File | Measure-Object -Property Length -Sum
+$folderSize = ([System.Math]::Round(($folderInfo.Sum/1MB)))
+Return "$folderSize"
+
+=========================================
+
+folder_size_o365_cache_mb
+
+Return folder size of O365 Cache "C:\Users\$u\AppData\Local\Microsoft\Office\16.0\OfficeFileCache" in MB
+
+$current_user = Get-WMIObject -class Win32_ComputerSystem | select username
+$User = ($current_user.username).Split('\')
+$u = $User[1]
+$folder = "C:\Users\$u\AppData\Local\Microsoft\Office\16.0\OfficeFileCache"
+$folderInfo = Get-ChildItem $folder -Recurse -File | Measure-Object -Property Length -Sum
+$folderSize = ([System.Math]::Round(($folderInfo.Sum/1MB)))
+Return "$folderSize"

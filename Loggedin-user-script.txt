@@ -1,0 +1,2 @@
+$loggedin_user = query user | Select-String '^>(\w+)' | ForEach-Object { $_.Matches[0].Groups[1].Value }
+write-output $loggedin_user

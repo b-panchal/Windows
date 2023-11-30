@@ -1,0 +1,53 @@
+=========================================
+folder_size_prefetch_mb
+
+Return folder size of "C:\Windows\Prefetch" in MB
+
+Language - PowerShell
+Execution Context - System
+Execution Architecture - Auto
+Response Data Type - Integer
+
+
+
+$folder = "C:\Windows\Prefetch"
+$folderInfo = Get-ChildItem $folder -Recurse -File | Measure-Object -Property Length -Sum
+$folderSize = ([System.Math]::Round(($folderInfo.Sum/1MB)))
+Return "$folderSize"
+
+=========================================
+
+folder_size_temp_mb
+
+Return folder size of "C:\Windows\Temp" in MB
+
+Language - PowerShell
+Execution Context - System
+Execution Architecture - Auto
+Response Data Type - Integer
+
+$folder = "C:\Windows\Temp"
+$folderInfo = Get-ChildItem $folder -Recurse -File | Measure-Object -Property Length -Sum
+$folderSize = ([System.Math]::Round(($folderInfo.Sum/1MB)))
+Return "$folderSize"
+
+=========================================
+
+folder_size_user_temp_mb
+
+Returns folder size of User Temp in MB
+
+Language - PowerShell
+Execution Context - Current User
+Execution Architecture - Auto
+Response Data Type - Integer
+
+$current_user = Get-WMIObject -class Win32_ComputerSystem | select username
+$User = ($current_user.username).Split('\')
+$u = $User[1]
+$folder = "C:\Users\$u\Appdata\Local\Temp"
+$folderInfo = Get-ChildItem $folder -Recurse -File | Measure-Object -Property Length -Sum
+$folderSize = ([System.Math]::Round(($folderInfo.Sum/1MB)))
+Return "$folderSize"
+
+=========================================

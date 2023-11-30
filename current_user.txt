@@ -1,0 +1,3 @@
+$loggedin_user = WMIC COMPUTERSYSTEM get username
+$loggedin_user = $loggedin_user.getvalue(2)
+write-output $loggedin_user
