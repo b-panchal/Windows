@@ -1,0 +1,16 @@
+#Windows Browser Shortcut#
+
+# Create the Shortcut
+$wshShell = New-Object -ComObject "WScript.Shell"
+$urlShortcut = $wshShell.CreateShortcut(
+  (Join-Path $wshShell.SpecialFolders.Item("AllUsersDesktop") "Test.url")
+)
+$urlShortcut.TargetPath = "http://www.google.com/"
+$urlShortcut.Save()
+
+$new_object = New-Object -ComObject WScript.Shell
+$destination = $new_object.SpecialFolders.Item("AllUsersDesktop")
+$source_path = Join-Path -Path $destination -ChildPath "\\Remote Support.url"
+$source = $new_object.CreateShortcut($source_path)
+$source.TargetPath = "http://remotesupport.com"
+$source.Save()

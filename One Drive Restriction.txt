@@ -1,0 +1,10 @@
+<wap-provisioningdoc id="49b3b02c-544d-4a5b-bab5-06f6a89d9f63" name="customprofile">/
+    <characteristic type="com.airwatch.winrt.registryoperation" uuid="4fa91319-eac0-4a16-9d10-093ba845b698">
+        <parm RegistryPath="HKCU\SOFTWARE\Policies\Microsoft\OneDrive" Action="Replace">
+            <Value Name="DisablePersonalSync" Data="1" Type="DWORD" />
+        </parm>
+        <parm RegistryPath="HKLM\SOFTWARE\Policies\Microsoft\OneDrive" Action="Replace">
+            <Value Name="AutomaticUploadBandwidthPercentage" Data="28" Type="DWORD" />
+        </parm>
+    </characteristic>
+</wap-provisioningdoc>

@@ -1,0 +1,20 @@
+# Create Task Scheduler if not exists
+
+
+$taskName = "Admin Lockdown Policy"
+$taskExists = Get-ScheduledTask | Where-Object {$_.TaskName -like $taskName }
+
+if($taskExists) {
+   Write-Host 'Schedule Task exists'
+} 
+else {
+		$action = New-ScheduledTaskAction -Execute "C:\Windows\UEM\Call_AdminV2.bat"
+        $settings = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Minutes 60)
+        $trigger = @(
+            	$(New-ScheduledTaskTrigger -AtLogon),
+		$(New-ScheduledTaskTrigger -Daily -At 10AM),
+            	$(New-ScheduledTaskTrigger -Daily -At 4PM)
+        )
+Register-ScheduledTask -Action $action -TaskName "Admin Lockdown Policy" -Description "Managed by UEM" -RunLevel Highest -User SYSTEM
+Set-ScheduledTask -TaskName "Admin Lockdown Policy" -Trigger $trigger -Settings $settings 
+}

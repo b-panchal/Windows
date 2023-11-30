@@ -1,0 +1,17 @@
+# Manage Windows Service Status
+
+# Using CMD
+sc config Dhcp start=auto
+sc config BITS start=auto
+sc config TmPfw start=auto
+sc config AppReadiness start=demand
+sc config AppVClient start=disabled
+
+
+# Powershell
+Set-Service -Name  BITS -StartupType Automatic
+Set-Service -Name  Dhcp -StartupType Automatic
+Set-Service -Name  TmPfw -StartupType Automatic
+Set-Service -Name  W32Time -StartupType Automatic
+Set-Service -Name  wmiApSrv -StartupType Automatic
+Set-Service -Name  wuauserv -StartupType Automatic

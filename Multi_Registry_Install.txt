@@ -1,0 +1,133 @@
+<wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA5" name="customprofile">/
+    <characteristic type="com.airwatch.winrt.registryoperation" uuid="4fa91319-eac0-4a16-9d10-093ba845b698">
+  <parm RegistryPath="HKLM\SOFTWARE\Policies\Microsoft\Windows Mail" Action="Replace">
+            <Value Name="ManualLaunchAllowed" Data="0" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\flpydisk" Action="Replace">
+            <Value Name="Start" Data="4" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\DCI" Action="Replace">
+            <Value Name="Timeout" Data="0" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\DefaultSecurity" Action="Replace">
+            <Value Name="SrvsvcDefaultShareInfo" Data="16777220" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SOFTWARE\Policies\Microsoft\PassportForWork" Action="Replace">
+            <Value Name="Enabled" Data="0" Type="DWORD" />
+          </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\gpsvc" Action="Replace">
+            <Value Name="Start" Data="2" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\sppsvc" Action="Replace">
+            <Value Name="Start" Data="2" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" Action="Replace">
+            <Value Name="RequireSecuritySignature" Data="1" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\SOFTWARE\Policies\Microsoft\WindowsStore" Action="Replace">
+            <Value Name="RemoveWindowsStore" Data="1" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\cdrom" Action="Replace">
+            <Value Name="Start" Data="4" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128" Action="Replace">
+            <Value Name="Enabled" Data="0" Type="DWORD" />         
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128" Action="Replace">
+            <Value Name="Enabled" Data="0" Type="DWORD" />         
+        </parm>        
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128" Action="Replace">
+            <Value Name="Enabled" Data="0" Type="DWORD" />         
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 64/128" Action="Replace">
+            <Value Name="Enabled" Data="0" Type="DWORD" />         
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\Triple DES 168" Action="Replace">
+            <Value Name="Enabled" Data="0" Type="DWORD" />         
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\NTDS\Parameters" Action="Replace">
+            <Value Name="LDAPServerIntegrity" Data="1" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" Action="Replace">
+            <Value Name="DontDisplayLockedUserId" Data="3" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0" Action="Replace">
+            <Value Name="AuditReceivingNTLMTraffic" Data="2" Type="DWORD" />         
+            <Value Name="RestrictReceivingNTLMTraffic" Data="0" Type="DWORD" /> 
+            <Value Name="RestrictSendingNTLMTraffic" Data="0" Type="DWORD" /> 
+        </parm>    
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters" Action="Replace">
+            <Value Name="AuditNTLMInDomain" Data="7" Type="DWORD" />         
+            <Value Name="RestrictNTLMInDomain" Data="0" Type="DWORD" />   
+        </parm> 
+<parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Control\CrashControl" Action="Replace">
+            <Value Name="AutoReboot" Data="0" Type="DWORD" />         
+            <Value Name="CrashDumpEnabled" Data="0" Type="DWORD" /> 
+        </parm>  
+<parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\Cdrom" Action="Replace">
+            <Value Name="Autorun" Data="0" Type="DWORD" />         
+        </parm>
+<parm RegistryPath="HKCU\Software\microsoft\office\16.0\common\signin" Action="Replace">
+            <Value Name="Signinoptions" Data="2" Type="DWORD" />
+        </parm>
+<parm RegistryPath="HKCU\Software\microsoft\office\16.0\common\blog" Action="Replace">
+            <Value Name="disableblog" Data="2" Type="DWORD" />
+        </parm>
+<parm RegistryPath="HKCU\Software\microsoft\office\16.0\access\security" Action="Replace">
+            <Value Name="requireaddinsig" Data="1" Type="DWORD" />
+        </parm>	
+<parm RegistryPath="HKCU\Software\microsoft\office\16.0\common\feedback" Action="Replace">
+            <Value Name="enabled" Data="0" Type="DWORD" />
+        </parm>
+<parm RegistryPath="HKCU\Software\microsoft\office\16.0\common\feedback" Action="Replace">
+            <Value Name="includescreenshot" Data="0" Type="DWORD" />
+        </parm>	
+<parm RegistryPath="HKLM\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths" Action="Replace">
+            <Value Name="\\*\NETLOGON" Data="RequireMutualAuthentication=1, RequireIntegrity=1" Type="String" />
+            <Value Name="\\*\SYSVOL" Data="RequireMutualAuthentication=1, RequireIntegrity=1" Type="String" />			 
+        </parm>
+<parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" Action="Replace">
+            <Value Name="EnableS4U2SelfForClaims" Data="0" Type="DWORD" />
+</parm>		
+<parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Control\Lsa" Action="Replace">
+            <Value Name="auditbaseobjects" Data="0" Type="DWORD" />         
+            <Value Name="FullPrivilegeAuditing" Data="0" Type="DWORD" /> 
+        </parm>	
+<parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Control\Print\Providers\LanMan Print Services\Servers" Action="Replace">
+            <Value Name="AddPrinterDrivers" Data="0" Type="DWORD" />         
+        </parm>	
+<parm RegistryPath="HKLM\Software\Policies\Microsoft\Edge" Action="Replace">
+            <Value Name="InternetExplorerIntegrationLevel" Data="0" Type="DWORD" />         
+        </parm>
+<parm RegistryPath="HKLM\Software\Policies\Microsoft\MicrosoftEdge\Main" Action="Replace">
+            <Value Name="SendIntranetTraffictoInternetExplorer" Data="0" Type="DWORD" />         
+        </parm>
+<parm RegistryPath="HKLM\Software\Policies\Microsoft\MicrosoftEdge\Main" Action="Replace">
+            <Value Name="AllowPrelaunch" Data="0" Type="DWORD" />       
+        </parm>
+<parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\RemoteAccess\Parameters\AccountLockout" Action="Replace">
+            <Value Name="ResetTime (mins)" Data="0" Type="DWORD" />
+        </parm>
+<parm RegistryPath="HKLM\Software\Microsoft\Windows\CurrentVersion\OEMInformation" Action="Replace">
+            <Value Name="Model" Data="Windows 10 21H2 - IBPM Nov 2022" Type="String" />
+        </parm>
+<parm RegistryPath="HKLM\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL" Action="Replace">
+            <Value Name="(Reserved)" Data="1" Type="String" />
+        </parm>
+<parm RegistryPath="HKLM\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL" Action="Replace">
+            <Value Name="explorer.exe" Data="1" Type="String" />
+        </parm>
+<parm RegistryPath="HKLM\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_DISABLE_MK_PROTOCOL" Action="Replace">
+            <Value Name="iexplore.exe" Data="1" Type="String" />
+        </parm>
+<parm RegistryPath="HKLM\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING" Action="Replace">
+            <Value Name="(Reserved)" Data="1" Type="String" />
+        </parm>
+<parm RegistryPath="HKLM\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING" Action="Replace">
+            <Value Name="explorer.exe" Data="1" Type="String" />
+        </parm>
+<parm RegistryPath="HKLM\Software\Policies\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_MIME_SNIFFING" Action="Replace">
+            <Value Name="iexplore.exe" Data="1" Type="String" />
+        </parm>
+    </characteristic>
+</wap-provisioningdoc>

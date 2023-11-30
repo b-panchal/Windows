@@ -1,0 +1,31 @@
+Manage Edge Favourites
+
+####################################################
+Name
+Value	
+Intranet 				https://intranet.corp.tatasteel.com/
+Office 365				https://portal.office.com/
+Employee Self Service-	https://irisapp.corp.tatasteel.com/ESH/
+SAP HR					https://myportal.tatasteel.co.in:50001/irj/portal
+SAP Fiori				https://tsmag.tatasteel.co.in/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html
+MD Online 1-			https://webappsprd.corp.tatasteel.com/downloads/mdonline.asp
+MD Online 2-			https://tslin.sharepoint.com/sites/LiveStreaming/SitePages/MD-Online.aspx
+Enterprise Search		https://search.tatasteel.com/
+IT Helpdesk				https://tatasteel.service-now.com/it
+
+
+{&quot;url&quot;: &quot;https://tslmyapp.tatasteel.co.in/index.html&quot;, &quot;name&quot;: &quot;TSL My App&quot;}, {&quot;url&quot;: &quot;https://intranet.corp.tatasteel.com&quot;, &quot;name&quot;: &quot;Intranet&quot;}, {&quot;url&quot;: &quot;https://portal.office.com&quot;, &quot;name&quot;: &quot;Office 365&quot;}, {&quot;url&quot;: &quot;https://irisapp.corp.tatasteel.com/ESH&quot;, &quot;name&quot;: &quot;Employee Self Service&quot;}, {&quot;url&quot;: &quot;https://myportal.tatasteel.co.in:50001/irj/portal&quot;, &quot;name&quot;: &quot;SAP HR&quot;}, {&quot;url&quot;: &quot;https://tsmag.tatasteel.co.in/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html&quot;, &quot;name&quot;: &quot;SAP Fiori&quot;}, {&quot;url&quot;: &quot;https://webappsprd.corp.tatasteel.com/downloads/mdonline.asp&quot;, &quot;name&quot;: &quot;MD Online 1&quot;}, {&quot;url&quot;: &quot;https://tslin.sharepoint.com/sites/LiveStreaming/SitePages/MD-Online.aspx&quot;, &quot;name&quot;: &quot;MD Online 2&quot;}, {&quot;url&quot;: &quot;https://search.tatasteel.com/&quot;, &quot;name&quot;: &quot;Enterprise Search&quot;}, {&quot;url&quot;: &quot;https://tatasteel.service-now.com/it&quot;, &quot;name&quot;: &quot;IT Helpdesk&quot;}
+
+####################################################
+
+
+<wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA5" name="customprofile">/
+    <characteristic type="com.airwatch.winrt.registryoperation" uuid="4fa91319-eac0-4a16-9d10-093ba845b698">
+		<parm RegistryPath="HKLM\SOFTWARE\Policies\Microsoft\Edge" Action="Replace">
+			<Value Name="FavoritesBarEnabled" Data="1" Type="DWORD" />
+		</parm>
+		<parm RegistryPath="HKLM\SOFTWARE\Policies\Microsoft\Edge" Action="Replace">
+			<Value Name="ManagedFavorites" Data="[{&quot;url&quot;: &quot;https://tslmyapp.tatasteel.co.in/index.html&quot;, &quot;name&quot;: &quot;TSL My App&quot;}, {&quot;url&quot;: &quot;https://intranet.corp.tatasteel.com&quot;, &quot;name&quot;: &quot;Intranet&quot;}, {&quot;url&quot;: &quot;https://portal.office.com&quot;, &quot;name&quot;: &quot;Office 365&quot;}, {&quot;url&quot;: &quot;https://irisapp.corp.tatasteel.com/ESH&quot;, &quot;name&quot;: &quot;Employee Self Service&quot;}, {&quot;url&quot;: &quot;https://myportal.tatasteel.co.in:50001/irj/portal&quot;, &quot;name&quot;: &quot;SAP HR&quot;}, {&quot;url&quot;: &quot;https://tsmag.tatasteel.co.in/sap/bc/ui5_ui5/ui2/ushell/shells/abap/FioriLaunchpad.html&quot;, &quot;name&quot;: &quot;SAP Fiori&quot;}, {&quot;url&quot;: &quot;https://webappsprd.corp.tatasteel.com/downloads/mdonline.asp&quot;, &quot;name&quot;: &quot;MD Online 1&quot;}, {&quot;url&quot;: &quot;https://tslin.sharepoint.com/sites/LiveStreaming/SitePages/MD-Online.aspx&quot;, &quot;name&quot;: &quot;MD Online 2&quot;}, {&quot;url&quot;: &quot;https://search.tatasteel.com/&quot;, &quot;name&quot;: &quot;Enterprise Search&quot;}, {&quot;url&quot;: &quot;https://tatasteel.service-now.com/it&quot;, &quot;name&quot;: &quot;IT Helpdesk&quot;}]" Type="String" />
+		</parm>
+    </characteristic>
+</wap-provisioningdoc>

@@ -1,0 +1,12 @@
+# Manage Folder Permission - Temp Folder Permission
+
+$accessRuleIdentity = "Domain\Domain Users"
+$accessRuleRights = "FullControl"
+$accessRuleType = "Allow"
+$accessRule = New-Object System.Security.AccessControl.FileSystemAccessRule($accessRuleIdentity, $accessRuleRights, "ContainerInherit,ObjectInherit", "None", $accessRuleType)
+
+$folderPath = "C:\Windows\Temp"
+
+$acl = Get-Acl -Path $folderPath
+$acl.SetAccessRule($accessRule)
+Set-Acl -Path $folderPath -AclObject $acl

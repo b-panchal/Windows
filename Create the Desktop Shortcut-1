@@ -1,0 +1,43 @@
+
+
+# Creates a Shortcut for Microsoft Edge Browser on Desktop
+start-process cmd.exe
+$TargetFile2 = "C:\Program Files\Microsoft\Edge\Application\msedge.exe"
+$ShortcutFile2 = "$env:Public\Desktop\Microsoft Edge.lnk"
+$WScriptShell2 = New-Object -ComObject WScript.Shell
+$ShortcutIcon2 = "C:\Program Files\Microsoft\Edge\Application\msedge.exe"
+$Description2 = "Launch Microsoft Edge Browser"
+$Shortcut2 = $WScriptShell2.CreateShortcut($ShortcutFile2)
+$Shortcut2.TargetPath = $TargetFile2
+$Shortcut2.IconLocation = $ShortcutIcon2
+$Shortcut2.Description = $Description2
+$Shortcut2.Save()
+
+ 
+
+# Creates a Shortcut for Google Chrome Browser on Desktop
+start-process cmd.exe
+$TargetFile3 = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+$ShortcutFile3 = "$env:Public\Desktop\Google Chrome.lnk"
+$WScriptShell3 = New-Object -ComObject WScript.Shell
+$ShortcutIcon3 = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+$Description3 = "Launch Google Chrome Browser"
+$Shortcut3 = $WScriptShell3.CreateShortcut($ShortcutFile3)
+$Shortcut3.TargetPath = $TargetFile3
+$Shortcut3.IconLocation = $ShortcutIcon3
+$Shortcut3.Description = $Description3
+$Shortcut3.Save()
+
+
+
+
+Desktop Shortcut - TSL Digital Assistant
+
+$shortcut_name = "TSL Digital Assistant"
+$shortcut_target = "https://tslcorp.corp.tatasteel.com/TSLDigitalAssistant/home.aspx"
+$sh = new-object -com "WScript.Shell"
+$p = $sh.SpecialFolders.item("AllUsersDesktop")
+$lnk = $sh.CreateShortcut( (join-path $p $shortcut_name) + ".lnk" )
+$lnk.TargetPath = $shortcut_target
+$lnk.IconLocation = "\\corp.tatasteel.com\NETLOGON\ChatGPT.ico"
+$lnk.Save()

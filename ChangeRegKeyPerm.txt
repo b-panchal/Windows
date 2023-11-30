@@ -1,0 +1,40 @@
+#Execution Command .\ChangeRegKeyPerm.ps1 -registryKeyPath "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion" -accessRuleIdentity "Everyone" -accessRuleRights "FullControl" -accessRuleType "Allow" 
+
+
+#Example Usage:  .\ChangeRegKeyPerm.ps1 -registryKeyPath "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion" -accessRuleIdentity "Everyone" -accessRuleRights "FullControl" -accessRuleType "Allow"
+
+param (
+    [Parameter(Mandatory = $true)]
+    [string]$registryKeyPath,
+
+    [Parameter(Mandatory = $true)]
+    [string]$accessRuleIdentity,
+
+    [Parameter(Mandatory = $true)]
+    [string]$accessRuleRights,
+
+    [Parameter(Mandatory = $true)]
+    [string]$accessRuleType
+)
+
+# Create the access rule
+$accessRule = New-Object System.Security.AccessControl.RegistryAccessRule($accessRuleIdentity, $accessRuleRights, $accessRuleType)
+
+try {
+    # Get the registry key
+    $registryKey = [Microsoft.Win32.Registry]::LocalMachine.OpenSubKey($registryKeyPath, 'ReadWriteSubTree', 'TakeOwnership')
+
+    # Get the existing permissions of the registry key
+    $existingPermissions = $registryKey.GetAccessControl()
+
+    # Add the new access rule
+    $existingPermissions.AddAccessRule($accessRule)
+
+    # Set the modified permissions on the registry key
+    $registryKey.SetAccessControl($existingPermissions)
+
+    Write-Host "Permissions changed successfully!"
+}
+catch {
+    Write-Host "An error occurred: $_"
+}

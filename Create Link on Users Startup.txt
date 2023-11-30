@@ -1,0 +1,7 @@
+# Create Link on Users Startup
+# While publishing it via UEM script make sure "Execution Context & Privileges" is set to "User Context with Admin Privilage"
+
+$Shell = New-Object -ComObject ("WScript.Shell")
+$Favorite = $Shell.CreateShortcut("$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\Google.url")
+$Favorite.TargetPath = "https://www.google.com";
+$Favorite.Save()

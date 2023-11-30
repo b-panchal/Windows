@@ -1,0 +1,37 @@
+<wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA5" name="customprofile">/
+    <characteristic type="com.airwatch.winrt.registryoperation" uuid="4fa91319-eac0-4a16-9d10-093ba845b698">
+  <parm RegistryPath="HKLM\SOFTWARE\Policies\Microsoft\Windows Mail" Action="Replace">
+            <Value Name="ManualLaunchAllowed" Data="0" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\flpydisk" Action="Replace">
+            <Value Name="Start" Data="4" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\DCI" Action="Replace">
+            <Value Name="Timeout" Data="0" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\DefaultSecurity" Action="Replace">
+            <Value Name="SrvsvcDefaultShareInfo" Data="16777220" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SOFTWARE\Policies\Microsoft\PassportForWork" Action="Replace">
+            <Value Name="Enabled" Data="0" Type="DWORD" />
+          </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\gpsvc" Action="Replace">
+            <Value Name="Start" Data="2" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\sppsvc" Action="Replace">
+            <Value Name="Start" Data="2" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" Action="Replace">
+            <Value Name="RequireSecuritySignature" Data="1" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\SOFTWARE\Policies\Microsoft\WindowsStore" Action="Replace">
+            <Value Name="RemoveWindowsStore" Data="1" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Services\cdrom" Action="Replace">
+            <Value Name="Start" Data="4" Type="DWORD" />
+        </parm>
+  <parm RegistryPath="HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128" Action="Replace">
+            <Value Name="Enabled" Data="0" Type="DWORD" />         
+        </parm>
+    </characteristic>
+</wap-provisioningdoc>

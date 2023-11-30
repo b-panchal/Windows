@@ -1,0 +1,34 @@
+#Example Usage:  .\ChgFldrPerm.ps1 -folderPath "C:\Windows\Fonts" -accessRuleIdentity "Everyone" -accessRuleRights "FullControl" -accessRuleType "Allow"
+
+param (
+    [Parameter(Mandatory = $true)]
+    [string]$folderPath,
+
+    [Parameter(Mandatory = $true)]
+    [string]$accessRuleIdentity,
+
+    [Parameter(Mandatory = $true)]
+    [string]$accessRuleRights,
+
+    [Parameter(Mandatory = $true)]
+    [string]$accessRuleType
+)
+
+# Create the access rule
+$accessRule = New-Object System.Security.AccessControl.FileSystemAccessRule($accessRuleIdentity, $accessRuleRights, $accessRuleType)
+
+try {
+    # Get the existing permissions of the Fonts folder
+    $existingPermissions = Get-Acl -Path $folderPath
+
+    # Add the new access rule
+    $existingPermissions.AddAccessRule($accessRule)
+
+    # Set the modified permissions on the Fonts folder
+    Set-Acl -Path $folderPath -AclObject $existingPermissions
+
+    Write-Host "Permissions changed successfully!"
+}
+catch {
+    Write-Host "An error occurred: $_"
+}
