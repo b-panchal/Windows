@@ -1,14 +1,6 @@
-Copy-Item "\\corp.tatasteel.com\NETLOGON\ielaunch.url" -Destination "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup" -Force
-
-
-Copy-Item -path "\\corp.tatasteel.com\NETLOGON\img0.jpg" -Destination "$env:SystemRoot\TSLWallpapers\Image01.jpg" -force
-
-
+Copy-Item "\\corp.domain.com\NETLOGON\ielaunch.url" -Destination "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup" -Force
+Copy-Item -path "\\corp.domain.com\NETLOGON\img0.jpg" -Destination "$env:SystemRoot\TSLWallpapers\Image01.jpg" -force
 
 # Copy all files from the Folder to a Destination path
-
-Copy-Item "\\corp.tatasteel.com\NETLOGON\MeetingBackground\*.*" -Destination "$env:APPDATA\Microsoft\Teams\Backgrounds\Uploads\" -Force
-
-
-
-Copy-Item -Path "\\corp.tatasteel.com\NETLOGON\blank.potx" -Destination "$env:APPDATA\Microsoft\Templates\Blank.potx" -Force
+Copy-Item "\\corp.domain.com\NETLOGON\MeetingBackground\*.*" -Destination "$env:APPDATA\Microsoft\Teams\Backgrounds\Uploads\" -Force
+Copy-Item -Path "\\corp.domain.com\NETLOGON\blank.potx" -Destination "$env:APPDATA\Microsoft\Templates\Blank.potx" -Force
