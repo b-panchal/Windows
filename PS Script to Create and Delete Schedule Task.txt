@@ -1,6 +1,6 @@
 # Create Schedule Task
 
-$action = New-ScheduledTaskAction -Execute "\\corp.tatasteel.com\NETLOGON\PurgeEvtLogs.bat"
+$action = New-ScheduledTaskAction -Execute "\\corp.company.com\NETLOGON\PurgeEvtLogs.bat"
 $settings = New-ScheduledTaskSettingsSet -ExecutionTimeLimit (New-TimeSpan -Minutes 60)
 $trigger = @(
     $(New-ScheduledTaskTrigger -Daily -At 10AM),
