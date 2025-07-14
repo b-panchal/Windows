@@ -6,14 +6,14 @@
       <![CDATA[<groupmembership>
         <accessgroup desc = "Administrators">
           <member name = "Administrator" />
-          <member name = "AzureAD\philtest1@eucocto.com" />
-          <member name = "AzureAD\philtest2@eucocto.com" />
+          <member name = "AzureAD\wsotest1@wsoadmin.com" />
+          <member name = "AzureAD\wsotest2@wsoadmin.com" />
           <member name = "S-1-12-1-4236668006-1087825656-2726067375-1039889116" />
         </accessgroup>
         <accessgroup desc = "Remote Desktop Users">
           <member name = "Administrator" />
-          <member name = "AzureAD\philtest3@eucocto.com" />
-          <member name = "AzureAD\philtest4@eucocto.com" />
+          <member name = "AzureAD\wsotest3@wsoadmin.com" />
+          <member name = "AzureAD\wsotest4@wsoadmin.com" />
           <member name = "S-1-12-1-3198331077-1199125661-3902990989-584626875" />
         </accessgroup>
       </groupmembership>]]>
