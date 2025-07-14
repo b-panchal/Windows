@@ -31,13 +31,13 @@ $Shortcut3.Save()
 
 
 
-Desktop Shortcut - TSL Digital Assistant
+# Create a desktop shortcut using a icon stored in network drive
 
-$shortcut_name = "TSL Digital Assistant"
-$shortcut_target = "https://tslcorp.corp.tatasteel.com/TSLDigitalAssistant/home.aspx"
+$shortcut_name = "Digital Assistant"
+$shortcut_target = "https://corp.companydomain.com/DigitalAssistant/home.aspx"
 $sh = new-object -com "WScript.Shell"
 $p = $sh.SpecialFolders.item("AllUsersDesktop")
 $lnk = $sh.CreateShortcut( (join-path $p $shortcut_name) + ".lnk" )
 $lnk.TargetPath = $shortcut_target
-$lnk.IconLocation = "\\corp.tatasteel.com\NETLOGON\ChatGPT.ico"
+$lnk.IconLocation = "\\corp.companydomain.com\NETLOGON\ChatGPT.ico"
 $lnk.Save()
