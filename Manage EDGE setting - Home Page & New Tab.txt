@@ -1,7 +1,7 @@
 <wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA5" name="customprofile">/
     <characteristic type="com.airwatch.winrt.registryoperation" uuid="4fa91319-eac0-4a16-9d10-093ba845b698">
          <parm RegistryPath="HKLM\Software\Policies\Microsoft\Edge" Action="Replace">
-            <Value Name="HomepageLocation" Data="https://tslmyapp.tatasteel.co.in" Type="String" />
+            <Value Name="HomepageLocation" Data="https://myapp.Company.co.in" Type="String" />
         </parm>
         <parm RegistryPath="HKLM\Software\Policies\Microsoft\Edge" Action="Replace">
             <Value Name="DefaultSearchProviderEnabled" Data="1" Type="DWORD" />
@@ -16,7 +16,7 @@
             <Value Name="RestoreOnStartup" Data="4" Type="DWORD" />
         </parm>
         <parm RegistryPath="HKLM\Software\Policies\Microsoft\Edge\Recommended\RestoreOnStartupURLs" Action="Replace">
-            <Value Name="1" Data="https://tslmyapp.tatasteel.co.in" Type="String" />
+            <Value Name="1" Data="https://myapp.Company.co.in" Type="String" />
         </parm>
         <parm RegistryPath="HKLM\Software\Policies\Microsoft\Edge" Action="Replace">
             <Value Name="DefaultSearchProviderSearchURL" Data="{google:baseURL}search?q={searchTerms}&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:searchClient}{google:sourceId}ie={inputEncoding}" Type="ExpandString" />
@@ -28,7 +28,7 @@
 <wap-provisioningdoc id="1164DF07-F217-449B-95F8-FB85A34D3CA5" name="customprofile">/
     <characteristic type="com.airwatch.winrt.registryoperation" uuid="4fa91319-eac0-4a16-9d10-093ba845b698">
          <parm RegistryPath="HKLM\Software\Policies\Microsoft\Edge" Action="Remove">
-            <Value Name="HomepageLocation" Data="https://tslmyapp.tatasteel.co.in" Type="String" />
+            <Value Name="HomepageLocation" Data="https://myapp.Company.co.in" Type="String" />
         </parm>
         <parm RegistryPath="HKLM\Software\Policies\Microsoft\Edge" Action="Remove">
             <Value Name="DefaultSearchProviderEnabled" Data="1" Type="DWORD" />
@@ -43,7 +43,7 @@
             <Value Name="RestoreOnStartup" Data="4" Type="DWORD" />
         </parm>
         <parm RegistryPath="HKLM\Software\Policies\Microsoft\Edge\Recommended\RestoreOnStartupURLs" Action="Remove">
-            <Value Name="1" Data="https://tslmyapp.tatasteel.co.in" Type="String" />
+            <Value Name="1" Data="https://myapp.Company.co.in" Type="String" />
         </parm>
         <parm RegistryPath="HKLM\Software\Policies\Microsoft\Edge" Action="Remove">
             <Value Name="DefaultSearchProviderSearchURL" Data="{google:baseURL}search?q={searchTerms}&{google:RLZ}{google:originalQueryForSuggestion}{google:assistedQueryStats}{google:searchFieldtrialParameter}{google:searchClient}{google:sourceId}ie={inputEncoding}" Type="ExpandString" />
